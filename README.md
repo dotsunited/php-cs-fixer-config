@@ -19,6 +19,7 @@ $ composer require --dev dotsunited/php-cs-fixer-config
 The following configurations are available:
 
 * `DotsUnited\PhpCsFixer\Php56Config`
+* `DotsUnited\PhpCsFixer\Php71Config`
 
 ### Configuration
 
