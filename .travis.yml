@@ -1,0 +1,32 @@
+language: php
+
+php:
+  - 5.6
+  - 7.0
+  - 7.1
+
+matrix:
+  include:
+    - php: 5.6
+      env: dependencies=lowest
+    - php: 7.1
+      env: dependencies=highest cs=true
+  fast_finish: true
+
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+    - $HOME/.php-cs-fixer
+
+install:
+  - if [ -z "$dependencies" ]; then travis_retry composer install --no-interaction; fi;
+  - if [ "$dependencies" = "lowest" ]; then travis_retry composer update --prefer-lowest --no-interaction; fi;
+  - if [ "$dependencies" = "highest" ]; then travis_retry composer update --no-interaction; fi;
+  - composer show
+
+before_script:
+  - mkdir -p "$HOME/.php-cs-fixer"
+
+script:
+  - if [[ "$cs" == "true" ]]; then vendor/bin/php-cs-fixer fix --verbose --diff --dry-run; fi
+  - vendor/bin/phpunit -v --coverage-text
