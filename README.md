@@ -1,6 +1,8 @@
 php-cs-fixer-config
 ===================
 
+[![Build Status](https://travis-ci.org/dotsunited/php-cs-fixer-config.svg?branch=master)](https://travis-ci.org/dotsunited/php-cs-fixer-config)
+
 Configurations for [`friendsofphp/php-cs-fixer`](http://github.com/FriendsOfPHP/PHP-CS-Fixer)
 use by Dots United.
 
