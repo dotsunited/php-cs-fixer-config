@@ -218,7 +218,7 @@ final class Php56ConfigTest extends ConfigTestCase
             'yoda_style' => [
                 'equal' => true,
                 'identical' => true,
-                'less_and_greater' => true,
+                'less_and_greater' => null,
             ],
         ];
     }

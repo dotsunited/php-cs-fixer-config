@@ -220,7 +220,7 @@ final class Php71Config extends Config
             'yoda_style' => [
                 'equal' => true,
                 'identical' => true,
-                'less_and_greater' => true,
+                'less_and_greater' => null,
             ],
         ];
 
