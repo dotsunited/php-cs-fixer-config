@@ -50,7 +50,7 @@ Add `.php_cs.cache` (this is the cache file created by `php-cs-fixer`) to `.giti
 
 ### Travis
 
-Update your `.travis.yml` to cache the `php_cs.cache` file:
+Update your `.travis.yml` to cache the `.php_cs.cache` file:
 
 ```yml
 cache:
@@ -68,7 +68,7 @@ script:
 
 ### Gitlab
 
-Update your `.gitlab-ci.yml` to cache the `php_cs.cache` file:
+Update your `.gitlab-ci.yml` to cache the `.php_cs.cache` file:
 
 ```yml
 cache:
