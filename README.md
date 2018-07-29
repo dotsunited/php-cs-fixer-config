@@ -84,6 +84,11 @@ test:
         - vendor/bin/php-cs-fixer fix --verbose --diff --dry-run
 ```
 
+## Credits
+
+This package is based off
+[`refinery29/php-cs-fixer-config`](https://github.com/refinery29/php-cs-fixer-config/).
+
 License
 -------
 
