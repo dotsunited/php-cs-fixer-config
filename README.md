@@ -92,5 +92,5 @@ This package is based off
 License
 -------
 
-Copyright (c) 2017 Dots United GmbH.
+Copyright (c) 2017-2018 Dots United GmbH.
 Released under the [MIT](LICENSE) license.
