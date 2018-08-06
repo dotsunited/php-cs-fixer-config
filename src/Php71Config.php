@@ -6,8 +6,12 @@ use PhpCsFixer\Config;
 
 final class Php71Config extends Config
 {
-    public function __construct()
+    private $customRules;
+
+    public function __construct(array $customRules = [])
     {
+        $this->customRules = $customRules;
+
         parent::__construct('Dots United (PHP 7.1)');
 
         $this->setRiskyAllowed(true);
@@ -15,7 +19,7 @@ final class Php71Config extends Config
 
     public function getRules()
     {
-        return [
+        return \array_merge([
             '@PSR2' => true,
             'align_multiline_comment' => [
                 'comment_type' => 'all_multiline',
@@ -287,6 +291,6 @@ final class Php71Config extends Config
                 'identical' => true,
                 'less_and_greater' => null,
             ],
-        ];
+        ], $this->customRules);
     }
 }

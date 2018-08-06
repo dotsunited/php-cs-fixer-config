@@ -38,6 +38,15 @@ abstract class ConfigTestCase extends Framework\TestCase
         $this->assertEquals($this->rules(), $config->getRules());
     }
 
+    final public function testAllowsSettingCustomRules()
+    {
+        $this->assertTrue($this->createConfig()->getRules()['@PSR2']);
+
+        $config = $this->createConfig(['@PSR2' => false]);
+
+        $this->assertFalse($config->getRules()['@PSR2']);
+    }
+
     final public function testAllConfiguredRulesAreBuiltIn()
     {
         $fixersNotBuiltIn = \array_diff(
@@ -67,7 +76,7 @@ abstract class ConfigTestCase extends Framework\TestCase
     /**
      * @return ConfigInterface
      */
-    abstract protected function createConfig();
+    abstract protected function createConfig(array $customRules = []);
 
     /**
      * @return string

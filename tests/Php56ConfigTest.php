@@ -4,9 +4,9 @@ namespace DotsUnited\PhpCsFixer;
 
 final class Php56ConfigTest extends ConfigTestCase
 {
-    protected function createConfig()
+    protected function createConfig(array $customRules = [])
     {
-        return new Php56Config();
+        return new Php56Config($customRules);
     }
 
     protected function name()
