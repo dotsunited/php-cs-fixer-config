@@ -67,6 +67,7 @@ final class Php56ConfigTest extends ConfigTestCase
             'class_keyword_remove' => false,
             'combine_consecutive_issets' => true,
             'combine_consecutive_unsets' => true,
+            'combine_nested_dirname' => false,
             'comment_to_phpdoc' => false,
             'compact_nullable_typehint' => false,
             'concat_space' => [
@@ -88,6 +89,8 @@ final class Php56ConfigTest extends ConfigTestCase
             'explicit_indirect_variable' => true,
             'explicit_string_variable' => true,
             'final_internal_class' => true,
+            'fopen_flag_order' => false,
+            'fopen_flags' => false,
             'fully_qualified_strict_types' => true,
             'function_to_constant' => true,
             'function_typehint_space' => true,
@@ -95,6 +98,7 @@ final class Php56ConfigTest extends ConfigTestCase
             'hash_to_slash_comment' => true,
             'header_comment' => false,
             'heredoc_to_nowdoc' => true,
+            'implode_call' => true,
             'include' => true,
             'increment_style' => [
                 'style' => 'pre',
@@ -106,6 +110,7 @@ final class Php56ConfigTest extends ConfigTestCase
             'lowercase_cast' => true,
             'lowercase_static_reference' => true,
             'magic_constant_casing' => true,
+            'magic_method_casing' => true,
             'mb_str_functions' => false,
             'method_argument_space' => [
                 'ensure_fully_multiline' => true,
@@ -203,6 +208,7 @@ final class Php56ConfigTest extends ConfigTestCase
             ],
             'php_unit_fqcn_annotation' => true,
             'php_unit_internal_class' => false,
+            'php_unit_method_casing' => false,
             'php_unit_mock' => true,
             'php_unit_namespaced' => [
                 'target' => '5.7',
