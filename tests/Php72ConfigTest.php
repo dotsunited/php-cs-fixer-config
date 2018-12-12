@@ -2,24 +2,21 @@
 
 namespace DotsUnited\PhpCsFixer;
 
-use PhpCsFixer\Config;
-
-final class Php71Config extends Config
+final class Php72ConfigTest extends ConfigTestCase
 {
-    private $customRules;
-
-    public function __construct(array $customRules = [])
+    protected function createConfig(array $customRules = [])
     {
-        $this->customRules = $customRules;
-
-        parent::__construct('Dots United (PHP 7.1)');
-
-        $this->setRiskyAllowed(true);
+        return new Php72Config($customRules);
     }
 
-    public function getRules()
+    protected function name()
     {
-        return \array_merge([
+        return 'Dots United (PHP 7.2)';
+    }
+
+    protected function rules()
+    {
+        return [
             '@PSR2' => true,
             'align_multiline_comment' => [
                 'comment_type' => 'all_multiline',
@@ -156,6 +153,7 @@ final class Php71Config extends Config
                 'use',
                 'use_trait',
             ],
+
             'no_extra_consecutive_blank_lines' => [
                 'break',
                 'case',
@@ -297,6 +295,6 @@ final class Php71Config extends Config
                 'identical' => true,
                 'less_and_greater' => null,
             ],
-        ], $this->customRules);
+        ];
     }
 }
