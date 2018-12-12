@@ -75,7 +75,7 @@ final class Php71ConfigTest extends ConfigTestCase
             ],
             'date_time_immutable' => false,
             'declare_equal_normalize' => true,
-            'declare_strict_types' => true,
+            'declare_strict_types' => false,
             'dir_constant' => true,
             'doctrine_annotation_array_assignment' => true,
             'doctrine_annotation_braces' => [
